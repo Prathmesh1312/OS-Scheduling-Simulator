@@ -1,0 +1,204 @@
+.compare-view {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.compare-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.05), rgba(5, 150, 105, 0.05));
+    border: 1px solid rgba(79, 70, 229, 0.2);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    animation: banner-in 0.5s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+@keyframes banner-in {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.best-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.best-name {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.best-stat {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-left: auto;
+    padding: 2px 8px;
+    background: var(--accent-glow);
+    border-radius: 99px;
+}
+
+.compare-table-scroll {
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    background: var(--bg-secondary);
+}
+
+.compare-table thead th {
+    padding: 0.6rem 0.85rem;
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    background: var(--bg-tertiary);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.compare-table tbody tr {
+    border-bottom: 1px solid var(--border-subtle);
+    transition: background 0.15s;
+}
+
+.compare-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.compare-table tbody tr:hover {
+    background: var(--bg-tertiary);
+}
+
+.compare-table td {
+    padding: 0.55rem 0.85rem;
+    vertical-align: middle;
+}
+
+.best-row {
+    background: var(--accent-glow) !important;
+    border-left: 3px solid var(--accent);
+}
+
+.alg-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 9px;
+    border-radius: 99px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: white;
+    box-shadow: var(--shadow-sm);
+    white-space: nowrap;
+}
+
+.cpu-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cpu-bar {
+    height: 6px;
+    border-radius: 3px;
+    max-width: 80px;
+    min-width: 4px;
+    transition: width 0.4s ease;
+}
+
+.cpu-bar-wrap span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.compare-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.chart-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.chart-card h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.75rem 0;
+}
+
+.gantt-compare-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.mini-gantt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 0.85rem;
+}
+
+.mini-gantt-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.85rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mini-gantt-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.mini-gantt-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.mini-stat {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+}

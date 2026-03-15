@@ -1,0 +1,155 @@
+.insights-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+}
+
+.insights-header h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0 0 0.25rem 0;
+}
+
+.insights-header p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.insights-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 200px;
+    font-size: 1rem;
+    color: var(--text-muted);
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    border: 1px dashed var(--border);
+    padding: 2rem;
+    text-align: center;
+}
+
+.insights-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.insight-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--bg-primary);
+    border-left: 4px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.insight-card.info {
+    border-left-color: var(--accent);
+    background: rgba(79, 70, 229, 0.03);
+}
+
+.insight-card.warning {
+    border-left-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.03);
+}
+
+.insight-card.success {
+    border-left-color: #10b981;
+    background: rgba(16, 185, 129, 0.03);
+}
+
+.insight-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    flex-shrink: 0;
+}
+
+.insight-card.info .insight-icon { color: var(--accent); background: rgba(79, 70, 229, 0.1); }
+.insight-card.warning .insight-icon { color: #f59e0b; background: rgba(245, 158, 11, 0.1); }
+.insight-card.success .insight-icon { color: #10b981; background: rgba(16, 185, 129, 0.1); }
+
+.insight-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.insight-content h4 {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.insight-content p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* ── Execution Logs ── */
+.execution-logs-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    flex: 1;
+    min-height: 200px;
+}
+
+.execution-logs-wrapper h4 {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.execution-logs {
+    background: #1e293b; /* Dark terminal look */
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    max-height: 300px;
+}
+
+.log-entry {
+    font-size: 0.75rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.log-time {
+    color: #94a3b8;
+    flex-shrink: 0;
+}
+
+.log-core {
+    color: #38bdf8;
+    flex-shrink: 0;
+    font-weight: 600;
+}
+
+.log-msg {
+    color: #e2e8f0;
+}
